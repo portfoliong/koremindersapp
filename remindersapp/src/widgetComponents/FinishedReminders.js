@@ -1,4 +1,5 @@
 import React from 'react';
+import imageThree from '../images/finishedRemindersChecklistImage.jpg';
 
 
 const  FinishedReminders = ({removeFinishedReminder,finishedReminders}) => {
@@ -25,28 +26,33 @@ const  FinishedReminders = ({removeFinishedReminder,finishedReminders}) => {
    
     return (
        
-        <div className='card'>
-            <div className='createdRemindersList z-depth-2 card-title'>
-                        
-                <div className='card-content'>
-                    <div>
-                        {completedRemindersList}
-                    </div>
-                    <div>
-                        <button className="waves-effect #ef5350 red lighten-1 btn" onClick={() => removeFinishedReminder()}> Remove Completed Reminders</button>  
-                    </div>
-
-                </div>
-                      
-                        
-            </div>
-        </div>
        
-
+       
+       <div className='card'>
+       <div className="card-image">
+           <img src={imageThree}/>
+           <span className='finishedRemindersList card-title'>Finished Reminders</span>
+       </div>
+       
+                   
+           <div className='card-content'>
+            <div>
+                    {completedRemindersList}
+            </div>
+            <div>
+                    <button className="waves-effect #0d47a1 blue darken-4 btn" onClick={() => removeFinishedReminder()}> Remove Completed Reminders</button>  
+            </div>
+           </div>
+  
+   </div>
         
     )
 }
+                
+
+export default FinishedReminders;                        
+              
+                      
+                        
 
 
-
-export default FinishedReminders;

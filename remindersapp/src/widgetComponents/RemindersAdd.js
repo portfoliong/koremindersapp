@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import imageOne from '../images/addRemindersChecklistImage.jpg';
 class RemindersAdd extends Component{
     state = {
         id: null,
@@ -38,19 +38,30 @@ class RemindersAdd extends Component{
     }
     render(){
         return(
-            <div className='card z-depth-2'>
-                <div className='card-content'>
-                    <form className="waves-effect waves-light" onSubmit={this.handleSubmit }>
-                        <label htmlFor="name">Message</label>
-                        {/* 'required' tag put in to ensure the reminder isn't left blank */}
-                        <input  required placeholder="Hey! Add a Reminder" value={this.state.message} type="text" id="message" onChange={this.handleInput}/>
+                        
+                <div className='card'>
+                    <div className="card-image">
+                        <img src={imageOne}/>
+                        <span className='finishedRemindersList card-title'>Add Reminders</span>
+                    </div>
 
-                        <button className="waves-effect waves-light btn z-depth-1 pulse #7b1fa2 purple darken-2"> Submit</button>
-                    </form>
+                                
+                        <div className='card-content'>
+                            <form className="waves-effect waves-light" onSubmit={this.handleSubmit }>
+                                <label htmlFor="name">Message</label>
+                                {/* 'required' tag put in to ensure the reminder isn't left blank */}
+                                <input  required placeholder="Hey! Add a Reminder" value={this.state.message} type="text" id="message" onChange={this.handleInput}/>
+
+                                <button className="waves-effect waves-light btn z-depth-1 pulse #b71c1c red darken-4">Submit</button>
+
+                                <div><hr/></div>
+                            </form>
+                        </div>
                 </div>
-            </div>
-
         )
     }
 }
 export default RemindersAdd
+
+
+

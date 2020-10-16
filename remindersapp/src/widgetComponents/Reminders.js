@@ -1,5 +1,5 @@
 import React from 'react';
-
+import imageTwo from '../images/activeRemindersChecklistImage.jpg';
 const  Reminders = ({reminders,removeReminder,addFinishedReminder}) => {
     
     
@@ -33,19 +33,23 @@ const  Reminders = ({reminders,removeReminder,addFinishedReminder}) => {
     return (
     
     <div className='card'>
-        <div className='createdRemindersList z-depth-2 card-title'>
+        <div className="card-image">
+            <img src={imageTwo}/>
+            <span className='createdRemindersList card-title'>Active Reminders</span>
+        </div>
+        
                     
             <div className='card-content'>
                 <div>
                     {createdRemindersList}
                 </div>
             </div>
-                
-        </div>
+   
     </div>
         
     )
-}
+}                
+
 
 
 

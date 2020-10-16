@@ -91,15 +91,15 @@ removeFinishedReminder = () =>{
   render(){
     return (
             <div className="App row center">
-                <div className="col s12 m4 l2"><h5>Add a Reminder</h5>
+                <div className="col s12 m4 l4"><h5></h5>
                     <RemindersAdd  addReminderToState={this.addReminderToState}/>
                 </div>
 
-                <div className="col s12 m4 l8"><h5>Reminders</h5>
+                <div className="col s12 m4 l4"><h5></h5>
                     <Reminders  reminders={this.state.reminders} removeReminder={this.removeReminderFromState}  addFinishedReminder={this.addFinishedReminder}/>
                 </div>
                 
-                <div className="col s12 m4 l2"><h5>Complete Reminders</h5>
+                <div className="col s12 m4 l4"><h5></h5>
                     <FinishedReminders  removeFinishedReminder={this.removeFinishedReminder} finishedReminders={this.state.finishedReminders}/>
                 </div>
             </div>

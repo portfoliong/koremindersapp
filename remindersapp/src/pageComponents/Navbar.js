@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Navlink, withRouter} from 'react-router-dom';
+import {Link, Navlink} from 'react-router-dom';
 
 
 const Navbar = () =>{
@@ -21,4 +21,4 @@ const Navbar = () =>{
 }
 
 //wrapping the navBar in the  higher order component, to give it the same 'powers'(props and methods) as the 
-export default withRouter(Navbar);
+export default Navbar;

@@ -12,6 +12,7 @@ describe ('Test: Initialise Navbar and mount all React components (if needed)', 
 
     //The 'mount' method cannot be used on the 'Navbar' component, as the 'link' components within the Navbar.js cannot be used outside of the 'router'
 
+ 
 });
 
 

@@ -4,6 +4,7 @@ class RemindersAdd extends Component{
     state = {
         id: null,
         message: null,
+        submitted: false
         
 
     }
@@ -21,6 +22,7 @@ class RemindersAdd extends Component{
     }
 
     handleSubmit = (e) => {
+      
         //To prevent the page reloading, preventDefault
         e.preventDefault();
         // Below is very important ...
@@ -35,7 +37,11 @@ class RemindersAdd extends Component{
 
         //Removing input from textbox after it's been added
         this.setState({message:''})
+
+     
     }
+
+    
     render(){
         return(
                         
@@ -52,7 +58,7 @@ class RemindersAdd extends Component{
                                 {/* 'required' tag put in to ensure the reminder isn't left blank */}
                                 <input  required placeholder="Hey! Add a Reminder" value={this.state.message} type="text" id="message" onChange={this.handleInput}/>
 
-                                <button className="waves-effect waves-light btn z-depth-1 pulse #b71c1c red darken-4">Submit</button>
+                                <button className="waves-effect waves-light btn z-depth-1 pulse #b71c1c red darken-4" id="remindersAddSubmitButton">Submit</button>
 
                                 <div><hr/></div>
                             </form>

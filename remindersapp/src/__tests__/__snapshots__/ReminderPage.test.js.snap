@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: Initialise Reminder page and mount all React components tests to see if the render method in ReminderPage renders correctly 1`] = `ShallowWrapper {}`;

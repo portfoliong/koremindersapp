@@ -4,7 +4,7 @@ class RemindersAdd extends Component{
     state = {
         id: null,
         message: null,
-        submitted: false
+       
         
 
     }

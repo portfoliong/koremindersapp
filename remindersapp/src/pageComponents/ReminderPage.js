@@ -66,12 +66,12 @@ addFinishedReminder = (reminders) =>{
        finishedReminders: completedReminders
      })
 
-     let thisNewFinishedRemindersMessage = reminders.message;
+     let thisNewFinishedRemindersMessage = reminders.id;
 
 //Ensuring the finished reminder is removed from reminder.
-// Why?: If the finished reminder is removed from the 'active' reminders list,  it cannot be added twice by the  user 
+// Why?: If the finished reminder is removed from the 'active' reminders list,  it cannot be added twice by the  user.
     let updatedReminders = this.state.reminders.filter(reminders => {
-      return reminders.message !== thisNewFinishedRemindersMessage
+      return reminders.id !== thisNewFinishedRemindersMessage
     })
 
     this.setState({reminders: updatedReminders})
@@ -83,8 +83,13 @@ addFinishedReminder = (reminders) =>{
 
 removeFinishedReminder = () =>{
 //Follows same explanation as 'removeReminderFromState'.
- let completedReminder = '';
- this.setState({finishedReminders: ''})
+// All reminders have an id, thus, if I return all the reminders with an id of 'null', there will be nothing returned. This is how the Finihed Reminders are cleared.
+let clearFinishedReminders = [...this.state.finishedReminders.filter(finishedReminders => {
+  return  finishedReminders.id  === null;
+})]
+
+ 
+ this.setState({finishedReminders: clearFinishedReminders})
 }
 
  

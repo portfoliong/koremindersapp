@@ -11,7 +11,9 @@ const Navbar = () =>{
             <div className="nav-content right">
                 <ul className="tabs tabs-transparent">
                     <li className="tab"><Link to="/">Home</Link></li>
-                    <li className="tab"><Link to="/calendarPage">Calendar</Link></li>
+                    {/* Commented out until it's finished */}
+                    {/* <li className="tab"><Link to="/calendarPage">Calendar</Link></li>*/}
+                    
                     <li className="tab"><Link to="/reminderPage">Reminders</Link></li>
                 </ul>
             </div>
